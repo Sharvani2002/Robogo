@@ -6,15 +6,13 @@ from turtlesim.msg import Pose
 from math import pow, atan2, sqrt
 PI = 3.14159265358979323
 
-
-
 x=5.544444561
 y=5.544444561
 
 def callback(msg):
 	global x
 	global y
-    # print "x: ",msg.x, "y: ",msg.y,"theta: ",msg.theta
+	# print "x: ",msg.x, "y: ",msg.y,"theta: ",msg.theta
 	x=msg.x
 	y=msg.y
 
@@ -72,8 +70,8 @@ def main():
 
 
 if __name__ == '__main__':
-    try:
-        main()
-    except rospy.ROSInterruptException:
-        pass
+	try:
+		main()
+	except rospy.ROSInterruptException:
+		pass
 
